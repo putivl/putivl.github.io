@@ -1,1 +1,0 @@
-# putivl.github.io
