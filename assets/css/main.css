@@ -3442,15 +3442,7 @@
 				font-size: 11pt;
 			}
 
-			h2 br, h3 br, h4 br, h5 br, h6 br {
-				display: none;
-			}
-
 		/* Section/Article */
-
-			header br {
-				display: none;
-			}
 
 			header.major {
 				padding: 0 4em;
