@@ -114,7 +114,7 @@
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
-		letter-spacing: -0.015em;
+/*		letter-spacing: -0.015em;*/
 	}
 
 	a {
@@ -159,13 +159,13 @@
 	h2 {
 		font-size: 2.25em;
 		line-height: 1.5em;
-		letter-spacing: -0.035em;
+/*		letter-spacing: -0.035em;*/
 	}
 
 	h3 {
 		font-size: 1.75em;
 		line-height: 1.5em;
-		letter-spacing: -0.025em;
+/*		letter-spacing: -0.025em;*/
 	}
 
 	h4 {
@@ -3366,27 +3366,10 @@
 			color: rgba(255, 255, 255, 0.75) !important;
 		}
 
-/* Wide */
-
-	@media screen and (max-width: 1680px) {
-
-		/* Basic */
-
-			body, input, select, textarea {
-				font-size: 13pt;
-			}
-
-		/* Banner */
-
-			#banner {
-				padding: 10em 0 18em 0;
-			}
-
-	}
 
 /* Normal */
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1680px) {
 
 		/* Basic */
 
@@ -3662,7 +3645,7 @@
 			h2 {
 				font-size: 1.75em;
 				line-height: 1.35em;
-				letter-spacing: -0.025em;
+/*				letter-spacing: -0.025em;*/
 			}
 
 			h3 {
