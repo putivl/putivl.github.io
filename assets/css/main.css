@@ -112,9 +112,9 @@
 		color: #777;
 		font-family: sans-serif;
 		font-size: 16pt;
-		font-weight: 300;
+/*		font-weight: 300;*/
 		line-height: 1.65em;
-/*		letter-spacing: -0.015em;*/
+/*		letter-spacing: 0.015em;*/
 	}
 
 	a {
@@ -133,7 +133,7 @@
 
 	strong, b {
 		color: #646464;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	em, i {
@@ -2493,7 +2493,7 @@
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-left: 3em;
 	}
 
 		ul li {
