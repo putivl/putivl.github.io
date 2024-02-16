@@ -1,18 +1,117 @@
-<head>
-	<title>Annual Calendar - Druzhina Putivl - SGPA</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<style>
-	body {
-		font-family:  sans-serif;
-	}
-	</style>
-</head>
-<body>
-	<a href="index-en.html">Home</a> - <strong>English</strong> - <a href="calendar-ru.html">русский</a>
-	<embed id="iframe" src="https://docs.google.com/document/d/e/2PACX-1vQz3ZeYmJCIvBO2wK48dhmsLRdmZka4oMHgmTPlgx1cTJPp7NyJi6AvUIWQhR9049r2rb9pLJAmbOHY/pub?embedded=true" width="100%" style="height: -webkit-fill-available">
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Druzhina Putivl - SGPA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
 
-<script>
-	console.log(document.getElementById('iframe'));
-</script>
-</body>
+			<!-- Header -->
+				<header id="header" class="alt">
+					<nav id="nav">
+						<ul>
+							<li><a href="index-en.html">Home</a></li>
+							<li><a href="index-en.html#about">About</a></li>
+							<li><a href="calendar-en.html">Events</a></li>
+							<li><a href="members.html">For Members</a></li>
+							<li><a href="index-en.html#cta">Contact</a></li>
+							<li><a href="calendar-en.html" class="button">Eng🇺🇸</a></li>
+							<li><a href="calendar-ru.html" class="button">Рус🇷🇺</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<h2>Calendar</h2>
+			</section>
+
+			<!-- Main -->
+			<section id="main" class="container">
+			    <div id="calendar-row" class="row">
+			        <div id="calendar" class="col-12 col-12-narrower" style="text-align: center;">
+			            <section class="box" id="calendar-box">
+                			<iframe id="calendar-iframe" src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&hl=en&title=Druzhina Putivl&src=ZHJ1emhpbmEucHV0aXZsQGdtYWlsLmNvbQ&color=%23a2845e" style="border:none; display: inline-block;" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+			            </section>
+			        </div>
+			    </div>
+			    <div id="ical-instructions" class="row">
+			        <div class="col-12 col-12-narrower">
+			            <section class="box">
+				            <h3>Add this to your calendar app:</h3>
+				            <ol>
+				                <li>Copy the following URL: <code id="calendar-url">https://calendar.google.com/calendar/ical/druzhina.putivl%40gmail.com/public/basic.ics</code> <button onclick="copyToClipboard()">Copy URL</button></li>
+				                <li>Open the Calendar app on your device.</li>
+				                <li>Go to "File" > "New Calendar Subscription" (Apple Calendar); or "Add Calendar" or "Subscribe to Calendar" (Android/Windows).</li>
+				                <li>Paste the copied URL into the "Calendar URL" field.</li>
+				                <li>Click "OK" or Subscribe".</li>
+				            </ol>
+			        	</section>
+			        </div>
+			    </div>
+			</section>
+
+
+			<!-- CTA -->
+				<section id="cta">
+
+					<h2>Contact us:</h2>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span>&nbsp;&nbsp;&nbsp;druzhina.putivl@gmail.com</a></li><br><br>
+						<li><a href="https://www.facebook.com/St.GeorgePathfindersDC" class="icon brands fa-facebook-f"><span class="label">Facebook</span>&nbsp;&nbsp;&nbsp;facebook.com/St.GeorgePathfindersDC</a></li><br><br>
+						<li><a href="https://www.instagram.com/putivl_pohodni_lager_2023/" class="icon brands fa-instagram"><span class="label">Instagram</span>&nbsp;&nbsp;&nbsp;@putivl_pohodni_lager_2023</a></li>
+					</ul>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>&copy; Druzhina Putivl, St. George Pathfinders of America. </li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+			    function copyToClipboard() {
+			        var copyText = document.getElementById("calendar-url");
+			        var tempInput = document.createElement("input");
+			        tempInput.value = copyText.innerText;
+			        document.body.appendChild(tempInput);
+			        tempInput.select();
+			        document.execCommand("copy");
+			        document.body.removeChild(tempInput);
+			        alert("URL copied to clipboard!");
+			    }
+
+			    window.addEventListener('resize', resizeCalendar);
+
+			    function resizeCalendar() {
+			        var boxWidth = document.getElementById("calendar-box").offsetWidth - 100;
+			        var boxHeight = document.getElementById("calendar-box").offsetHeight;
+			        document.getElementById("calendar-iframe").width = boxWidth;
+			    }
+
+			    // Initial resizing on page load
+			    window.addEventListener('load', resizeCalendar);
+			</script>
+
+	</body>
+</html>
